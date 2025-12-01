@@ -1,0 +1,22 @@
+body{
+    margin: 0px;
+    background-image:linear-gradient(blue, pink, 45deg);
+    background-repeat: no-repeat;
+}
+
+.album{
+    display: inline-block;
+    width: 100%;
+}
+
+.album .photo{
+    width: 150px;
+    margin: 20px;
+    transition: 0.3s;
+}
+
+#album-01 .photo:hover{
+    width: 180px;
+    box-shadow: 1px 1px 30px hsl(123, 93%, 45%);
+    transition: 0.3s;
+}
