@@ -580,7 +580,7 @@
 
     <!-- Áudio para a música -->
     <audio id="background-music" loop>
-        <source src="" type="audio/mpeg">
+        <source src="assets/music/amores.mp3" type="audio/mpeg">
     </audio>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -700,10 +700,10 @@
                 icon: 'fas fa-cookie-bite'
             },
             {
-                id: 'love-line',
-                name: 'Love Line',
-                description: 'Capturas de ecrã de Amor',
-                music: 'love-line.mp3',
+                id: 'master-chef',
+                name: 'Master Chef',
+                description: 'Pratos do Ano',
+                music: 'master-chef.mp3',
                 icon: 'fas fa-heartbeat'
             },
             {
@@ -714,10 +714,10 @@
                 icon: 'fas fa-moon'
             },
             {
-                id: 'hot-moment',
-                name: 'Hot Moment',
-                description: 'Momentos quentes e especiais',
-                music: 'hot-moment.mp3',
+                id: 'children',
+                name: 'Dia das Crianças',
+                description: 'Momentos de Diversão',
+                music: 'children.mp3',
                 icon: 'fas fa-fire'
             },
             {
@@ -732,12 +732,12 @@
         // Mídias de exemplo para cada álbum (em um sistema real, isso viria do diretório)
         const albumMedia = {
             'no-hospicio': [
-                { type: 'image', name: 'Foto 1', date: '2022-05-15', src: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80' },
+                { type: 'video', name: 'Foto 1', date: '2022-05-15', src: 'assets/albums/no-hospicio/ (1).mp4' },
                 { type: 'image', name: 'Foto 2', date: '2022-06-20', src: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80' },
                 { type: 'video', name: 'Vídeo 1', date: '2022-07-10', src: 'https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-partying-happily-4640-large.mp4' }
             ],
             'ministerio-da-mulher': [
-                { type: 'image', name: 'Encontro 1', date: '2022-03-12', src: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80' },
+                { type: 'image', name: 'Encontro 1', date: '2022-03-12', src: "assets/albums/ministerio-da-mulher/Alda.jpg" },
                 { type: 'image', name: 'Encontro 2', date: '2022-04-18', src: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80' }
             ],
             'videos': [
@@ -931,7 +931,7 @@
             backgroundMusic.pause();
             
             // Simular carregamento da música (em sistema real, carregaria o arquivo)
-            backgroundMusic.src = `#${album.music}`; // Placeholder
+            backgroundMusic.src = `${album.music}`; // Placeholder
             
             // Configurar volume
             backgroundMusic.volume = state.musicVolume;
