@@ -1,0 +1,83 @@
+memoreth-project/
+├── index.html              # Arquivo principal (código fornecido)
+├── assets/                 # Pasta principal de mídias
+│   ├── albums/            # Subpastas para cada álbum
+│   │   ├── no-hospicio/
+│   │   │   ├── foto1.jpg
+│   │   │   ├── foto2.jpg
+│   │   │   ├── foto3.jpg
+│   │   │   ├── video1.mp4
+│   │   │   └── video2.webm
+│   │   ├── ministerio-da-mulher/
+│   │   │   ├── encontro1.jpg
+│   │   │   ├── encontro2.jpg
+│   │   │   └── reuniao.mp4
+│   │   ├── ministerio-das-criancas/
+│   │   │   ├── crianca1.jpg
+│   │   │   ├── crianca2.jpg
+│   │   │   └── atividade.mp4
+│   │   ├── amores/
+│   │   │   ├── amor1.jpg
+│   │   │   ├── amor2.jpg
+│   │   │   └── momento.mp4
+│   │   ├── clube/
+│   │   │   ├── reuniao1.jpg
+│   │   │   ├── evento1.jpg
+│   │   │   └── festa.mp4
+│   │   ├── acampamento/
+│   │   │   ├── acamp1.jpg
+│   │   │   ├── acamp2.jpg
+│   │   │   └── aventura.mp4
+│   │   ├── videos/
+│   │   │   ├── video-especial1.mp4
+│   │   │   ├── video-especial2.webm
+│   │   │   └── thumbnail.jpg
+│   │   ├── memes/
+│   │   │   ├── meme1.jpg
+│   │   │   ├── meme2.jpg
+│   │   │   └── meme-video.mp4
+│   │   ├── snaplapse/
+│   │   │   ├── snap1.jpg
+│   │   │   ├── snap2.jpg
+│   │   │   └── distracao.mp4
+│   │   ├── sweetsnap/
+│   │   │   ├── fofo1.jpg
+│   │   │   ├── fofo2.jpg
+│   │   │   └── momento-fofo.mp4
+│   │   ├── love-line/
+│   │   │   ├── amor-line1.jpg
+│   │   │   ├── amor-line2.jpg
+│   │   │   └── declaracao.mp4
+│   │   ├── bons-sonhos/
+│   │   │   ├── sono1.jpg
+│   │   │   ├── sono2.jpg
+│   │   │   └── tranquilidade.mp4
+│   │   ├── hot-moment/
+│   │   │   ├── momento1.jpg
+│   │   │   ├── momento2.jpg
+│   │   │   └── momento-quente.mp4
+│   │   └── skimini/
+│   │       ├── divertido1.jpg
+│   │       ├── divertido2.jpg
+│   │       └── diversao.mp4
+│   └── music/              # Músicas para cada álbum
+│       ├── no-hospicio.mp3
+│       ├── ministerio-da-mulher.mp3
+│       ├── ministerio-das-criancas.mp3
+│       ├── amores.mp3
+│       ├── clube.mp3
+│       ├── acampamento.mp3
+│       ├── videos.mp3
+│       ├── memes.mp3
+│       ├── snaplapse.mp3
+│       ├── sweetsnap.mp3
+│       ├── love-line.mp3
+│       ├── bons-sonhos.mp3
+│       ├── hot-moment.mp3
+│       └── skimini.mp3
+├── css/                    # Estilos adicionais (opcional)
+│   └── custom.css
+├── js/                     # Scripts adicionais (opcional)
+│   ├── particles-config.js
+│   └── album-loader.js
+└── README.md               # Documentação do projeto
