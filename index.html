@@ -672,10 +672,10 @@
                 icon: 'fas fa-campground'
             },
             {
-                id: 'videos',
-                name: 'Vídeos',
+                id: 'random',
+                name: 'Aleatórios',
                 description: 'Vídeos especiais de momentos únicos',
-                music: 'videos.mp3',
+                music: 'random.mp3',
                 icon: 'fas fa-video'
             },
             {
@@ -731,28 +731,168 @@
 
         // Mídias de exemplo para cada álbum (em um sistema real, isso viria do diretório)
         const albumMedia = {
+            'acampamento': [
+                { type: 'image', name: 'Acampamento 1', date: '2023-07-10', src: 'assets/albums/acampamento/camp (1).jpeg' },
+                { type: 'image', name: 'Acampamento 2', date: '2023-07-11', src: 'assets/albums/acampamento/camp (2).jpeg' },
+                { type: 'image', name: 'Acampamento 3', date: '2023-07-12', src: 'assets/albums/acampamento/camp (3).jpeg' },
+                { type: 'image', name: 'Acampamento 4', date: '2023-07-13', src: 'assets/albums/acampamento/camp (4).jpeg' },
+                { type: 'image', name: 'Acampamento 5', date: '2023-07-14', src: 'assets/albums/acampamento/camp (5).jpeg' },
+                { type: 'image', name: 'Acampamento 6', date: '2023-07-15', src: 'assets/albums/acampamento/camp (6).jpeg' },
+                { type: 'image', name: 'Acampamento 7', date: '2023-07-16', src: 'assets/albums/acampamento/camp (7).jpeg' },
+                { type: 'image', name: 'Acampamento 8', date: '2023-07-17', src: 'assets/albums/acampamento/camp (8).jpeg' },
+                { type: 'image', name: 'Acampamento 9', date: '2023-07-18', src: 'assets/albums/acampamento/camp (9).jpeg' }
+            ],
+
+            'amores': [
+                { type: 'image', name: '💗 Vick Pensativa', date: '2023-01-15', src: 'assets/albums/amores/r (1).jpeg' },
+                { type: 'image', name: '🐻 Ursinho (Esteves)', date: '2023-02-20', src: 'assets/albums/amores/r (2).jpeg' },
+                { type: 'image', name: '📞 Vick Chamada', date: '2023-03-10', src: 'assets/albums/amores/r (9).jpeg' },
+                { type: 'image', name: '🌟 Mamy Crux', date: '2023-03-10', src: 'assets/albums/amores/r (3).jpeg' },
+                { type: 'image', name: '🎁 Aniversário da Vitória', date: '2023-03-10', src: 'assets/albums/amores/r (4).jpeg' },
+                { type: 'image', name: '💎 Domi Domi', date: '2023-03-10', src: 'assets/albums/amores/r (5).jpeg' },
+                { type: 'image', name: '😍 Nair Sister', date: '2023-03-10', src: 'assets/albums/amores/r (11).jpeg' },
+            ],
+
+            'bons-sonhos': [
+                { type: 'image', name: 'Bons Sonhos 1', date: '2023-07-10', src: 'assets/albums/bons-sonhos/bons (1).jpeg' },
+                { type: 'image', name: 'Bons Sonhos 2', date: '2023-07-11', src: 'assets/albums/bons-sonhos/bons (2).jpeg' },
+                { type: 'image', name: 'Bons Sonhos 3', date: '2023-07-12', src: 'assets/albums/bons-sonhos/bons (3).jpeg' },
+                { type: 'image', name: 'Bons Sonhos 4', date: '2023-07-13', src: 'assets/albums/bons-sonhos/bons (4).jpeg' },
+                { type: 'image', name: 'Bons Sonhos 5', date: '2023-07-14', src: 'assets/albums/bons-sonhos/bons (5).jpeg' },
+                { type: 'image', name: 'Bons Sonhos 6', date: '2023-07-15', src: 'assets/albums/bons-sonhos/bons (6).jpeg' },
+                { type: 'image', name: 'Bons Sonhos 7', date: '2023-07-16', src: 'assets/albums/bons-sonhos/bons (7).jpeg' },
+                { type: 'image', name: 'Bons Sonhos 8', date: '2023-07-17', src: 'assets/albums/bons-sonhos/bons (8).jpeg' },
+                { type: 'image', name: 'Bons Sonhos 9', date: '2023-07-18', src: 'assets/albums/bons-sonhos/bons (9).jpeg' },
+                { type: 'image', name: 'Bons Sonhos 10', date: '2023-07-19', src: 'assets/albums/bons-sonhos/bons (10).jpeg' }
+            ],
+
+            'children': [
+                { type: 'image', name: 'Dia 1', date: '2023-07-01', src: 'assets/albums/children/dia (1).jpeg' },
+                { type: 'image', name: 'Dia 2', date: '2023-07-02', src: 'assets/albums/children/dia (2).jpeg' },
+                { type: 'image', name: 'Dia 3', date: '2023-07-03', src: 'assets/albums/children/dia (3).jpeg' },
+                { type: 'image', name: 'Dia 4', date: '2023-07-04', src: 'assets/albums/children/dia (4).jpeg' },
+                { type: 'image', name: 'Dia 5', date: '2023-07-05', src: 'assets/albums/children/dia (5).jpeg' },
+                { type: 'image', name: 'Dia 6', date: '2023-07-06', src: 'assets/albums/children/dia (6).jpeg' },
+                { type: 'image', name: 'Dia 7', date: '2023-07-07', src: 'assets/albums/children/dia (7).jpeg' },
+                { type: 'image', name: 'Dia 8', date: '2023-07-08', src: 'assets/albums/children/dia (8).jpeg' },
+                { type: 'image', name: 'Dia 9', date: '2023-07-09', src: 'assets/albums/children/dia (9).jpeg' },
+                { type: 'image', name: 'Dia 10', date: '2023-07-10', src: 'assets/albums/children/dia (10).jpeg' },
+                { type: 'image', name: 'Dia 11', date: '2023-07-11', src: 'assets/albums/children/dia (11).jpeg' },
+                { type: 'image', name: 'Dia 12', date: '2023-07-12', src: 'assets/albums/children/dia (12).jpeg' },
+                { type: 'image', name: 'Dia 13', date: '2023-07-13', src: 'assets/albums/children/dia (13).jpeg' },
+                { type: 'image', name: 'Dia 14', date: '2023-07-14', src: 'assets/albums/children/dia (14).jpeg' },
+                { type: 'image', name: 'Dia 15', date: '2023-07-15', src: 'assets/albums/children/dia (15).jpeg' },
+                { type: 'image', name: 'Dia 16', date: '2023-07-16', src: 'assets/albums/children/dia (16).jpeg' },
+                { type: 'image', name: 'Dia 17', date: '2023-07-17', src: 'assets/albums/children/dia (17).jpeg' },
+                { type: 'image', name: 'Dia 20', date: '2023-07-20', src: 'assets/albums/children/dia (20).jpeg' },
+                { type: 'image', name: 'Dia 21', date: '2023-07-21', src: 'assets/albums/children/dia (21).jpeg' },
+                { type: 'image', name: 'Dia 22', date: '2023-07-22', src: 'assets/albums/children/dia (22).jpeg' },
+                { type: 'image', name: 'Dia 23', date: '2023-07-23', src: 'assets/albums/children/dia (23).jpeg' }
+            ],
+
+            'clube': [
+                { type: 'image', name: 'Clube 1', date: '2023-07-01', src: 'assets/albums/clube/clube (1).jpeg' },
+                { type: 'image', name: 'Clube 2', date: '2023-07-02', src: 'assets/albums/clube/clube (2).jpeg' },
+                { type: 'image', name: 'Clube 3', date: '2023-07-03', src: 'assets/albums/clube/clube (3).jpeg' },
+                { type: 'image', name: 'Clube 4', date: '2023-07-04', src: 'assets/albums/clube/clube (4).jpeg' },
+                { type: 'image', name: 'Clube 5', date: '2023-07-05', src: 'assets/albums/clube/clube (5).jpeg' },
+                { type: 'image', name: 'Clube 6', date: '2023-07-06', src: 'assets/albums/clube/clube (6).jpeg' },
+                { type: 'image', name: 'Clube 8', date: '2023-07-08', src: 'assets/albums/clube/clube (8).jpeg' },
+                { type: 'image', name: 'Clube 9', date: '2023-07-09', src: 'assets/albums/clube/clube (9).jpeg' },
+                { type: 'image', name: 'Clube 10', date: '2023-07-10', src: 'assets/albums/clube/clube (10).jpeg' },
+                { type: 'image', name: 'Clube 11', date: '2023-07-11', src: 'assets/albums/clube/clube (11).jpeg' },
+                { type: 'image', name: 'Clube 12', date: '2023-07-12', src: 'assets/albums/clube/clube (12).jpeg' },
+                { type: 'image', name: 'Clube 13', date: '2023-07-13', src: 'assets/albums/clube/clube (13).jpeg' },
+                { type: 'image', name: 'Clube 14', date: '2023-07-14', src: 'assets/albums/clube/clube (14).jpeg' },
+                { type: 'image', name: 'Clube 15', date: '2023-07-15', src: 'assets/albums/clube/clube (15).jpeg' },
+                { type: 'image', name: 'Clube 16', date: '2023-07-16', src: 'assets/albums/clube/clube (16).jpeg' },
+                { type: 'image', name: 'Clube 17', date: '2023-07-17', src: 'assets/albums/clube/clube (17).jpeg' },
+                { type: 'image', name: 'Clube 18', date: '2023-07-18', src: 'assets/albums/clube/clube (18).jpeg' },
+                { type: 'image', name: 'Clube 19', date: '2023-07-19', src: 'assets/albums/clube/clube (19).jpeg' },
+                { type: 'image', name: 'Clube 20', date: '2023-07-20', src: 'assets/albums/clube/clube (20).jpeg' }
+            ],
+
             'no-hospicio': [
-                { type: 'video', name: 'Foto 1', date: '2022-05-15', src: 'assets/albums/no-hospicio/ (1).mp4' },
-                { type: 'image', name: 'Foto 2', date: '2022-06-20', src: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80' },
-                { type: 'video', name: 'Vídeo 1', date: '2022-07-10', src: 'https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-partying-happily-4640-large.mp4' }
+                { type: 'video', name: 'Reunião de Grupo', date: '2022-05-15', src: 'assets/albums/no-hospicio/ (1).mp4' },
+                { type: 'video', name: 'Reunião de Grupo', date: '2022-06-20', src: 'assets/albums/no-hospicio/ (2).mp4' },
+                { type: 'video', name: 'Reunião de Grupo', date: '2022-07-10', src: 'assets/albums/no-hospicio/ (3).mp4' }
             ],
             'ministerio-da-mulher': [
-                { type: 'image', name: 'Encontro 1', date: '2022-03-12', src: "assets/albums/ministerio-da-mulher/Alda.jpg" },
-                { type: 'image', name: 'Encontro 2', date: '2022-04-18', src: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80' }
+                { type: 'image', name: 'Foto 1', date: '2022-03-12', src: 'assets/albums/ministerio-da-mulher/women (1).jpg' },
+                { type: 'image', name: 'Foto 2', date: '2022-04-18', src: 'assets/albums/ministerio-da-mulher/women (3).jpeg' },
+                { type: 'image', name: 'Foto 3', date: '2022-04-18', src: 'assets/albums/ministerio-da-mulher/women (2).jpeg' }
+                
             ],
-            'videos': [
-                { type: 'video', name: 'Vídeo Especial', date: '2023-01-15', src: 'https://assets.mixkit.co/videos/preview/mixkit-friends-smoking-a-hookah-while-talking-41530-large.mp4' },
-                { type: 'video', name: 'Momento Único', date: '2023-02-20', src: 'https://assets.mixkit.co/videos/preview/mixkit-woman-talking-on-the-phone-at-home-41528-large.mp4' },
-                { type: 'image', name: 'Foto de Vídeo', date: '2023-03-10', src: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80' }
+                        
+            'master-chef': [
+                { type: 'image', name: 'Master', date: '2023-07-10', src: 'assets/albums/master-chef/master.jpeg' },
+                { type: 'video', name: 'Masters 1', date: '2023-07-15', src: 'assets/albums/master-chef/mastes (1).mp4' },
+                { type: 'image', name: 'Masters 2', date: '2023-08-05', src: 'assets/albums/master-chef/mastes (2).jpeg' },
+                { type: 'video', name: 'Masters 2 Vídeo', date: '2023-08-10', src: 'assets/albums/master-chef/mastes (2).mp4' }
             ],
-            'hot-moment': [
-                { type: 'image', name: 'Momento 1', date: '2023-05-15', src: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80' },
-                { type: 'video', name: 'Vídeo Quente', date: '2023-06-20', src: 'https://assets.mixkit.co/videos/preview/mixkit-woman-turning-off-the-camera-after-recording-a-video-39845-large.mp4' }
+
+            'ministerio-das-criancas': [
+                { type: 'image', name: 'Crianças 1', date: '2023-07-10', src: 'assets/albums/ministerio-das-criancas/cri (1).jpeg' },
+                { type: 'image', name: 'Crianças 2', date: '2023-07-11', src: 'assets/albums/ministerio-das-criancas/cri (2).jpeg' },
+                { type: 'image', name: 'Crianças 3', date: '2023-07-12', src: 'assets/albums/ministerio-das-criancas/cri (3).jpeg' },
+                { type: 'image', name: 'Crianças 4', date: '2023-07-13', src: 'assets/albums/ministerio-das-criancas/cri (4).jpeg' },
+                { type: 'image', name: 'Crianças 5', date: '2023-07-14', src: 'assets/albums/ministerio-das-criancas/cri (5).jpeg' },
+                { type: 'image', name: 'Crianças 6', date: '2023-07-15', src: 'assets/albums/ministerio-das-criancas/cri (6).jpeg' },
+                { type: 'image', name: 'Crianças 7', date: '2023-07-16', src: 'assets/albums/ministerio-das-criancas/cri (7).jpeg' }
             ],
+
+            'random': [
+                { type: 'image', name: 'R 1 JPEG', date: '2023-07-01', src: 'assets/albums/random/r (1).jpeg' },
+                { type: 'image', name: 'R 1 JPG', date: '2023-07-02', src: 'assets/albums/random/r (1).jpg' },
+                { type: 'image', name: 'R 2', date: '2023-07-03', src: 'assets/albums/random/r (2).jpg' },
+                { type: 'image', name: 'R 3 JPEG', date: '2023-07-04', src: 'assets/albums/random/r (3).jpeg' },
+                { type: 'image', name: 'R 3 JPG', date: '2023-07-05', src: 'assets/albums/random/r (3).jpg' },
+                { type: 'image', name: 'R 4', date: '2023-07-06', src: 'assets/albums/random/r (4).jpeg' },
+                { type: 'image', name: 'R 5', date: '2023-07-07', src: 'assets/albums/random/r (5).jpeg' },
+                { type: 'image', name: 'R 7', date: '2023-07-09', src: 'assets/albums/random/r (7).jpeg' },
+                { type: 'image', name: 'R 9', date: '2023-07-11', src: 'assets/albums/random/r (9).jpeg' },
+                { type: 'image', name: 'R 10', date: '2023-07-12', src: 'assets/albums/random/r (10).jpeg' },
+                { type: 'image', name: 'R 11', date: '2023-07-13', src: 'assets/albums/random/r (11).jpeg' }
+            ],
+            
             'skimini': [
-                { type: 'image', name: 'Diversão 1', date: '2023-07-10', src: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80' },
-                { type: 'image', name: 'Diversão 2', date: '2023-08-05', src: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80' }
-            ]
+                { type: 'image', name: 'Diversão 1', date: '2023-07-10', src: 'assets/albums/skimini/sk (1).jpeg' },
+                { type: 'image', name: 'Diversão 2', date: '2023-08-05', src: 'assets/albums/skimini/sk (2).jpeg' },
+                { type: 'image', name: 'Diversão 3', date: '2023-09-12', src: 'assets/albums/skimini/sk (3).jpeg' },
+                { type: 'image', name: 'Diversão 4', date: '2023-10-20', src: 'assets/albums/skimini/sk (4).jpeg' }
+            ],
+
+            'snaplapse': [
+                { type: 'image', name: 'Snap 1', date: '2023-07-01', src: 'assets/albums/snaplapse/ (1).jpeg' },
+                { type: 'video', name: 'Snap 1 Vídeo', date: '2023-07-02', src: 'assets/albums/snaplapse/ (1).mp4' },
+                { type: 'image', name: 'Snap 2', date: '2023-07-03', src: 'assets/albums/snaplapse/ (2).jpeg' },
+                { type: 'video', name: 'Snap 2 Vídeo', date: '2023-07-04', src: 'assets/albums/snaplapse/ (2).mp4' },
+                { type: 'image', name: 'Snap 3', date: '2023-07-05', src: 'assets/albums/snaplapse/ (3).jpeg' },
+                { type: 'image', name: 'Snap 4', date: '2023-07-06', src: 'assets/albums/snaplapse/ (4).jpeg' },
+                { type: 'image', name: 'Snap 5', date: '2023-07-07', src: 'assets/albums/snaplapse/ (5).jpeg' },
+                { type: 'image', name: 'Snap 6', date: '2023-07-08', src: 'assets/albums/snaplapse/ (6).jpeg' },
+                { type: 'image', name: 'Snap 7', date: '2023-07-09', src: 'assets/albums/snaplapse/ (7).jpeg' },
+                { type: 'image', name: 'Snap 8', date: '2023-07-10', src: 'assets/albums/snaplapse/ (8).jpeg' },
+                { type: 'image', name: 'Snap 9', date: '2023-07-11', src: 'assets/albums/snaplapse/ (9).jpeg' },
+                { type: 'image', name: 'Snap 10', date: '2023-07-12', src: 'assets/albums/snaplapse/ (10).jpeg' },
+                { type: 'image', name: 'Snap 11', date: '2023-07-13', src: 'assets/albums/snaplapse/ (11).jpeg' }
+            ],
+
+            'sweetsnap': [
+                { type: 'image', name: 'SweetSnap 1', date: '2023-07-01', src: 'assets/albums/sweetsnap/ss (1).jpeg' },
+                { type: 'video', name: 'SweetSnap 1 Vídeo', date: '2023-07-02', src: 'assets/albums/sweetsnap/ss (1).mp4' },
+                { type: 'image', name: 'SweetSnap 2', date: '2023-07-03', src: 'assets/albums/sweetsnap/ss (2).jpeg' },
+                { type: 'image', name: 'SweetSnap 3', date: '2023-07-04', src: 'assets/albums/sweetsnap/ss (3).jpeg' },
+                { type: 'image', name: 'SweetSnap 4', date: '2023-07-05', src: 'assets/albums/sweetsnap/ss (4).jpeg' },
+                { type: 'image', name: 'SweetSnap 5', date: '2023-07-06', src: 'assets/albums/sweetsnap/ss (5).jpeg' },
+                { type: 'image', name: 'SweetSnap 6', date: '2023-07-07', src: 'assets/albums/sweetsnap/ss (6).jpeg' },
+                { type: 'image', name: 'SweetSnap 7', date: '2023-07-08', src: 'assets/albums/sweetsnap/ss (7).jpeg' },
+                { type: 'image', name: 'SweetSnap 8', date: '2023-07-09', src: 'assets/albums/sweetsnap/ss (8).jpeg' },
+                { type: 'image', name: 'SweetSnap 9', date: '2023-07-10', src: 'assets/albums/sweetsnap/ss (9).jpeg' },
+                { type: 'image', name: 'SweetSnap 10', date: '2023-07-11', src: 'assets/albums/sweetsnap/ss (10).jpeg' },
+                { type: 'image', name: 'SweetSnap 11', date: '2023-07-12', src: 'assets/albums/sweetsnap/ss (11).jpeg' },
+                { type: 'image', name: 'SweetSnap 12', date: '2023-07-13', src: 'assets/albums/sweetsnap/ss (12).jpeg' }
+            ],
         };
 
         // Para álbuns sem mídias específicas, usamos mídias genéricas
