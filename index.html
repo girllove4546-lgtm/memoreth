@@ -546,21 +546,28 @@
             </div>
             
             <!-- Controles de Música -->
-            <div class="music-controls">
-                <div class="music-info">
-                    <i class="fas fa-music music-icon"></i>
-                    <div class="music-name" id="current-music-name">no-hospicio.mp3</div>
-                </div>
-                
-                <button class="music-play-btn" id="music-play-btn">
-                    <i class="fas fa-play" id="music-play-icon"></i>
-                </button>
-                
-                <div class="volume-control">
-                    <i class="fas fa-volume-up" style="color: rgba(255,255,255,0.7);"></i>
-                    <input type="range" min="0" max="100" value="70" class="volume-slider" id="volume-slider">
-                </div>
-            </div>
+            <!-- Controles de Música (MANTENHA, mas simplifique) -->
+<div class="music-controls" style="opacity: 0.6;">
+    <div class="music-info">
+        <i class="fas fa-music music-icon"></i>
+        <div class="music-name" id="current-music-name">
+            Música de Fundo 🔄
+        </div>
+    </div>
+    
+    <!-- Botão desativado -->
+    <button class="music-play-btn" id="music-play-btn" disabled 
+            style="cursor: not-allowed; opacity: 0.5;"
+            title="Música automática (sempre tocando)">
+        <i class="fas fa-play" id="music-play-icon"></i>
+    </button>
+    
+    <!-- Controle de volume FUNCIONAL (mantenha para ajustar volume) -->
+    <div class="volume-control">
+        <i class="fas fa-volume-up" style="color: rgba(255,255,255,0.7);"></i>
+        <input type="range" min="0" max="100" value="70" class="volume-slider" id="volume-slider">
+    </div>
+</div>
         </div>
         
         <!-- Menu de Álbuns -->
@@ -573,14 +580,14 @@
         
         <!-- Footer -->
         <footer>
-            <p>Memoreth © 2023 - Um projeto para guardar memórias especiais</p>
+            <p>Memoreth © 2025 - Um projeto para guardar memórias especiais</p>
             <p class="memory-counter">Memórias carregadas: <span id="memories-count">0</span></p>
         </footer>
     </div>
 
     <!-- Áudio para a música -->
     <audio id="background-music" autoplay loop>
-        <source src="assets/music/amores.mp3" type="audio/mpeg">
+        <source src="assets/music/skimini.mp3" type="audio/mpeg">
     </audio>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -713,167 +720,167 @@
         // Mídias de exemplo para cada álbum (em um sistema real, isso viria do diretório)
         const albumMedia = {
             'acampamento': [
-                { type: 'image', name: 'Acampamento 1', date: '2023-07-10', src: 'assets/albums/acampamento/camp (1).jpeg' },
-                { type: 'image', name: 'Acampamento 2', date: '2023-07-11', src: 'assets/albums/acampamento/camp (2).jpeg' },
-                { type: 'image', name: 'Acampamento 3', date: '2023-07-12', src: 'assets/albums/acampamento/camp (3).jpeg' },
-                { type: 'image', name: 'Acampamento 4', date: '2023-07-13', src: 'assets/albums/acampamento/camp (4).jpeg' },
-                { type: 'image', name: 'Acampamento 5', date: '2023-07-14', src: 'assets/albums/acampamento/camp (5).jpeg' },
-                { type: 'image', name: 'Acampamento 6', date: '2023-07-15', src: 'assets/albums/acampamento/camp (6).jpeg' },
-                { type: 'image', name: 'Acampamento 7', date: '2023-07-16', src: 'assets/albums/acampamento/camp (7).jpeg' },
-                { type: 'image', name: 'Acampamento 8', date: '2023-07-17', src: 'assets/albums/acampamento/camp (8).jpeg' },
-                { type: 'image', name: 'Acampamento 9', date: '2023-07-18', src: 'assets/albums/acampamento/camp (9).jpeg' }
-            ],
+    { type: 'image', name: 'Acampamento 1', src: 'assets/albums/acampamento/camp (1).jpeg' },
+    { type: 'image', name: 'Acampamento 2', src: 'assets/albums/acampamento/camp (2).jpeg' },
+    { type: 'image', name: 'Acampamento 3', src: 'assets/albums/acampamento/camp (3).jpeg' },
+    { type: 'image', name: 'Acampamento 4', src: 'assets/albums/acampamento/camp (4).jpeg' },
+    { type: 'image', name: 'Acampamento 5', src: 'assets/albums/acampamento/camp (5).jpeg' },
+    { type: 'image', name: 'Acampamento 6', src: 'assets/albums/acampamento/camp (6).jpeg' },
+    { type: 'image', name: 'Acampamento 7', src: 'assets/albums/acampamento/camp (7).jpeg' },
+    { type: 'image', name: 'Acampamento 8', src: 'assets/albums/acampamento/camp (8).jpeg' },
+    { type: 'image', name: 'Acampamento 9', src: 'assets/albums/acampamento/camp (9).jpeg' }
+],
 
-            'amores': [
-                { type: 'image', name: '💗 Vick Pensativa', date: '2023-01-15', src: 'assets/albums/amores/r (1).jpeg' },
-                { type: 'image', name: '🐻 Ursinho (Esteves)', date: '2023-02-20', src: 'assets/albums/amores/r (2).jpeg' },
-                { type: 'image', name: '📞 Vick Chamada', date: '2023-03-10', src: 'assets/albums/amores/r (9).jpeg' },
-                { type: 'image', name: '🌟 Mamy Crux', date: '2023-03-10', src: 'assets/albums/amores/r (3).jpeg' },
-                { type: 'image', name: '🎁 Aniversário da Vitória', date: '2023-03-10', src: 'assets/albums/amores/r (4).jpeg' },
-                { type: 'image', name: '💎 Domi Domi', date: '2023-03-10', src: 'assets/albums/amores/r (5).jpeg' },
-                { type: 'image', name: '😍 Nair Sister', date: '2023-03-10', src: 'assets/albums/amores/r (11).jpeg' },
-            ],
+'amores': [
+    { type: 'image', name: '💗 Vick Pensativa', src: 'assets/albums/amores/r (1).jpeg' },
+    { type: 'image', name: '🐻 Ursinho (Esteves)', src: 'assets/albums/amores/r (2).jpeg' },
+    { type: 'image', name: '📞 Vick Chamada', src: 'assets/albums/amores/r (9).jpeg' },
+    { type: 'image', name: '🌟 Mamy Crux', src: 'assets/albums/amores/r (3).jpeg' },
+    { type: 'image', name: '🎁 Aniversário da Vitória', src: 'assets/albums/amores/r (4).jpeg' },
+    { type: 'image', name: '💎 Domi Domi', src: 'assets/albums/amores/r (5).jpeg' },
+    { type: 'image', name: '😍 Nair Sister', src: 'assets/albums/amores/r (11).jpeg' },
+],
 
-            'bons-sonhos': [
-                { type: 'image', name: 'Bons Sonhos 1', date: '2023-07-10', src: 'assets/albums/bons-sonhos/bons (1).jpeg' },
-                { type: 'image', name: 'Bons Sonhos 2', date: '2023-07-11', src: 'assets/albums/bons-sonhos/bons (2).jpeg' },
-                { type: 'image', name: 'Bons Sonhos 3', date: '2023-07-12', src: 'assets/albums/bons-sonhos/bons (3).jpeg' },
-                { type: 'image', name: 'Bons Sonhos 4', date: '2023-07-13', src: 'assets/albums/bons-sonhos/bons (4).jpeg' },
-                { type: 'image', name: 'Bons Sonhos 5', date: '2023-07-14', src: 'assets/albums/bons-sonhos/bons (5).jpeg' },
-                { type: 'image', name: 'Bons Sonhos 6', date: '2023-07-15', src: 'assets/albums/bons-sonhos/bons (6).jpeg' },
-                { type: 'image', name: 'Bons Sonhos 7', date: '2023-07-16', src: 'assets/albums/bons-sonhos/bons (7).jpeg' },
-                { type: 'image', name: 'Bons Sonhos 8', date: '2023-07-17', src: 'assets/albums/bons-sonhos/bons (8).jpeg' },
-                { type: 'image', name: 'Bons Sonhos 9', date: '2023-07-18', src: 'assets/albums/bons-sonhos/bons (9).jpeg' },
-                { type: 'image', name: 'Bons Sonhos 10', date: '2023-07-19', src: 'assets/albums/bons-sonhos/bons (10).jpeg' }
-            ],
+'bons-sonhos': [
+    { type: 'image', name: 'Bons Sonhos 1', src: 'assets/albums/bons-sonhos/bons (1).jpeg' },
+    { type: 'image', name: 'Bons Sonhos 2', src: 'assets/albums/bons-sonhos/bons (2).jpeg' },
+    { type: 'image', name: 'Bons Sonhos 3', src: 'assets/albums/bons-sonhos/bons (3).jpeg' },
+    { type: 'image', name: 'Bons Sonhos 4', src: 'assets/albums/bons-sonhos/bons (4).jpeg' },
+    { type: 'image', name: 'Bons Sonhos 5', src: 'assets/albums/bons-sonhos/bons (5).jpeg' },
+    { type: 'image', name: 'Bons Sonhos 6', src: 'assets/albums/bons-sonhos/bons (6).jpeg' },
+    { type: 'image', name: 'Bons Sonhos 7', src: 'assets/albums/bons-sonhos/bons (7).jpeg' },
+    { type: 'image', name: 'Bons Sonhos 8', src: 'assets/albums/bons-sonhos/bons (8).jpeg' },
+    { type: 'image', name: 'Bons Sonhos 9', src: 'assets/albums/bons-sonhos/bons (9).jpeg' },
+    { type: 'image', name: 'Bons Sonhos 10', src: 'assets/albums/bons-sonhos/bons (10).jpeg' }
+],
 
-            'children': [
-                { type: 'image', name: 'Dia 1', date: '2023-07-01', src: 'assets/albums/children/dia (1).jpeg' },
-                { type: 'image', name: 'Dia 2', date: '2023-07-02', src: 'assets/albums/children/dia (2).jpeg' },
-                { type: 'image', name: 'Dia 3', date: '2023-07-03', src: 'assets/albums/children/dia (3).jpeg' },
-                { type: 'image', name: 'Dia 4', date: '2023-07-04', src: 'assets/albums/children/dia (4).jpeg' },
-                { type: 'image', name: 'Dia 5', date: '2023-07-05', src: 'assets/albums/children/dia (5).jpeg' },
-                { type: 'image', name: 'Dia 6', date: '2023-07-06', src: 'assets/albums/children/dia (6).jpeg' },
-                { type: 'image', name: 'Dia 7', date: '2023-07-07', src: 'assets/albums/children/dia (7).jpeg' },
-                { type: 'image', name: 'Dia 8', date: '2023-07-08', src: 'assets/albums/children/dia (8).jpeg' },
-                { type: 'image', name: 'Dia 9', date: '2023-07-09', src: 'assets/albums/children/dia (9).jpeg' },
-                { type: 'image', name: 'Dia 10', date: '2023-07-10', src: 'assets/albums/children/dia (10).jpeg' },
-                { type: 'image', name: 'Dia 11', date: '2023-07-11', src: 'assets/albums/children/dia (11).jpeg' },
-                { type: 'image', name: 'Dia 12', date: '2023-07-12', src: 'assets/albums/children/dia (12).jpeg' },
-                { type: 'image', name: 'Dia 13', date: '2023-07-13', src: 'assets/albums/children/dia (13).jpeg' },
-                { type: 'image', name: 'Dia 14', date: '2023-07-14', src: 'assets/albums/children/dia (14).jpeg' },
-                { type: 'image', name: 'Dia 15', date: '2023-07-15', src: 'assets/albums/children/dia (15).jpeg' },
-                { type: 'image', name: 'Dia 16', date: '2023-07-16', src: 'assets/albums/children/dia (16).jpeg' },
-                { type: 'image', name: 'Dia 17', date: '2023-07-17', src: 'assets/albums/children/dia (17).jpeg' },
-                { type: 'image', name: 'Dia 20', date: '2023-07-20', src: 'assets/albums/children/dia (20).jpeg' },
-                { type: 'image', name: 'Dia 21', date: '2023-07-21', src: 'assets/albums/children/dia (21).jpeg' },
-                { type: 'image', name: 'Dia 22', date: '2023-07-22', src: 'assets/albums/children/dia (22).jpeg' },
-                { type: 'image', name: 'Dia 23', date: '2023-07-23', src: 'assets/albums/children/dia (23).jpeg' }
-            ],
+'children': [
+    { type: 'image', name: 'Dia 1', src: 'assets/albums/children/dia (1).jpeg' },
+    { type: 'image', name: 'Dia 2', src: 'assets/albums/children/dia (2).jpeg' },
+    { type: 'image', name: 'Dia 3', src: 'assets/albums/children/dia (3).jpeg' },
+    { type: 'image', name: 'Dia 4', src: 'assets/albums/children/dia (4).jpeg' },
+    { type: 'image', name: 'Dia 5', src: 'assets/albums/children/dia (5).jpeg' },
+    { type: 'image', name: 'Dia 6', src: 'assets/albums/children/dia (6).jpeg' },
+    { type: 'image', name: 'Dia 7', src: 'assets/albums/children/dia (7).jpeg' },
+    { type: 'image', name: 'Dia 8', src: 'assets/albums/children/dia (8).jpeg' },
+    { type: 'image', name: 'Dia 9', src: 'assets/albums/children/dia (9).jpeg' },
+    { type: 'image', name: 'Dia 10', src: 'assets/albums/children/dia (10).jpeg' },
+    { type: 'image', name: 'Dia 11', src: 'assets/albums/children/dia (11).jpeg' },
+    { type: 'image', name: 'Dia 12', src: 'assets/albums/children/dia (12).jpeg' },
+    { type: 'image', name: 'Dia 13', src: 'assets/albums/children/dia (13).jpeg' },
+    { type: 'image', name: 'Dia 14', src: 'assets/albums/children/dia (14).jpeg' },
+    { type: 'image', name: 'Dia 15', src: 'assets/albums/children/dia (15).jpeg' },
+    { type: 'image', name: 'Dia 16', src: 'assets/albums/children/dia (16).jpeg' },
+    { type: 'image', name: 'Dia 17', src: 'assets/albums/children/dia (17).jpeg' },
+    { type: 'image', name: 'Dia 20', src: 'assets/albums/children/dia (20).jpeg' },
+    { type: 'image', name: 'Dia 21', src: 'assets/albums/children/dia (21).jpeg' },
+    { type: 'image', name: 'Dia 22', src: 'assets/albums/children/dia (22).jpeg' },
+    { type: 'image', name: 'Dia 23', src: 'assets/albums/children/dia (23).jpeg' }
+],
 
-            'clube': [
-                { type: 'image', name: 'Clube 1', date: '2023-07-01', src: 'assets/albums/clube/clube (1).jpeg' },
-                { type: 'image', name: 'Clube 2', date: '2023-07-02', src: 'assets/albums/clube/clube (2).jpeg' },
-                { type: 'image', name: 'Clube 3', date: '2023-07-03', src: 'assets/albums/clube/clube (3).jpeg' },
-                { type: 'image', name: 'Clube 4', date: '2023-07-04', src: 'assets/albums/clube/clube (4).jpeg' },
-                { type: 'image', name: 'Clube 5', date: '2023-07-05', src: 'assets/albums/clube/clube (5).jpeg' },
-                { type: 'image', name: 'Clube 6', date: '2023-07-06', src: 'assets/albums/clube/clube (6).jpeg' },
-                { type: 'image', name: 'Clube 8', date: '2023-07-08', src: 'assets/albums/clube/clube (8).jpeg' },
-                { type: 'image', name: 'Clube 9', date: '2023-07-09', src: 'assets/albums/clube/clube (9).jpeg' },
-                { type: 'image', name: 'Clube 10', date: '2023-07-10', src: 'assets/albums/clube/clube (10).jpeg' },
-                { type: 'image', name: 'Clube 11', date: '2023-07-11', src: 'assets/albums/clube/clube (11).jpeg' },
-                { type: 'image', name: 'Clube 12', date: '2023-07-12', src: 'assets/albums/clube/clube (12).jpeg' },
-                { type: 'image', name: 'Clube 13', date: '2023-07-13', src: 'assets/albums/clube/clube (13).jpeg' },
-                { type: 'image', name: 'Clube 14', date: '2023-07-14', src: 'assets/albums/clube/clube (14).jpeg' },
-                { type: 'image', name: 'Clube 15', date: '2023-07-15', src: 'assets/albums/clube/clube (15).jpeg' },
-                { type: 'image', name: 'Clube 16', date: '2023-07-16', src: 'assets/albums/clube/clube (16).jpeg' },
-                { type: 'image', name: 'Clube 17', date: '2023-07-17', src: 'assets/albums/clube/clube (17).jpeg' },
-                { type: 'image', name: 'Clube 18', date: '2023-07-18', src: 'assets/albums/clube/clube (18).jpeg' },
-                { type: 'image', name: 'Clube 19', date: '2023-07-19', src: 'assets/albums/clube/clube (19).jpeg' },
-                { type: 'image', name: 'Clube 20', date: '2023-07-20', src: 'assets/albums/clube/clube (20).jpeg' }
-            ],
+'clube': [
+    { type: 'image', name: 'Clube 1', src: 'assets/albums/clube/clube (1).jpeg' },
+    { type: 'image', name: 'Clube 2', src: 'assets/albums/clube/clube (2).jpeg' },
+    { type: 'image', name: 'Clube 3', src: 'assets/albums/clube/clube (3).jpeg' },
+    { type: 'image', name: 'Clube 4', src: 'assets/albums/clube/clube (4).jpeg' },
+    { type: 'image', name: 'Clube 5', src: 'assets/albums/clube/clube (5).jpeg' },
+    { type: 'image', name: 'Clube 6', src: 'assets/albums/clube/clube (6).jpeg' },
+    { type: 'image', name: 'Clube 8', src: 'assets/albums/clube/clube (8).jpeg' },
+    { type: 'image', name: 'Clube 9', src: 'assets/albums/clube/clube (9).jpeg' },
+    { type: 'image', name: 'Clube 10', src: 'assets/albums/clube/clube (10).jpeg' },
+    { type: 'image', name: 'Clube 11', src: 'assets/albums/clube/clube (11).jpeg' },
+    { type: 'image', name: 'Clube 12', src: 'assets/albums/clube/clube (12).jpeg' },
+    { type: 'image', name: 'Clube 13', src: 'assets/albums/clube/clube (13).jpeg' },
+    { type: 'image', name: 'Clube 14', src: 'assets/albums/clube/clube (14).jpeg' },
+    { type: 'image', name: 'Clube 15', src: 'assets/albums/clube/clube (15).jpeg' },
+    { type: 'image', name: 'Clube 16', src: 'assets/albums/clube/clube (16).jpeg' },
+    { type: 'image', name: 'Clube 17', src: 'assets/albums/clube/clube (17).jpeg' },
+    { type: 'image', name: 'Clube 18', src: 'assets/albums/clube/clube (18).jpeg' },
+    { type: 'image', name: 'Clube 19', src: 'assets/albums/clube/clube (19).jpeg' },
+    { type: 'image', name: 'Clube 20', src: 'assets/albums/clube/clube (20).jpeg' }
+],
 
-            'no-hospicio': [
-                { type: 'video', name: 'Reunião de Grupo', date: '2022-05-15', src: 'assets/albums/no-hospicio/ (1).mp4' },
-                { type: 'video', name: 'Reunião de Grupo', date: '2022-06-20', src: 'assets/albums/no-hospicio/ (2).mp4' },
-                { type: 'video', name: 'Reunião de Grupo', date: '2022-07-10', src: 'assets/albums/no-hospicio/ (3).mp4' }
-            ],
-            'ministerio-da-mulher': [
-                { type: 'image', name: 'Foto 1', date: '2022-03-12', src: 'assets/albums/ministerio-da-mulher/women (1).jpg' },
-                { type: 'image', name: 'Foto 2', date: '2022-04-18', src: 'assets/albums/ministerio-da-mulher/women (3).jpeg' },
-                { type: 'image', name: 'Foto 3', date: '2022-04-18', src: 'assets/albums/ministerio-da-mulher/women (2).jpeg' }
-                
-            ],
-                        
-            'master-chef': [
-                { type: 'image', name: 'Master', date: '2023-07-10', src: 'assets/albums/master-chef/master.jpeg' },
-                { type: 'video', name: 'Masters 1', date: '2023-07-15', src: 'assets/albums/master-chef/mastes (1).mp4' },
-                { type: 'image', name: 'Masters 2', date: '2023-08-05', src: 'assets/albums/master-chef/mastes (2).jpeg' },
-                { type: 'video', name: 'Masters 2 Vídeo', date: '2023-08-10', src: 'assets/albums/master-chef/mastes (2).mp4' }
-            ],
-
-            'ministerio-das-criancas': [
-                { type: 'image', name: 'Crianças 1', date: '2023-07-10', src: 'assets/albums/ministerio-das-criancas/cri (1).jpeg' },
-                { type: 'image', name: 'Crianças 2', date: '2023-07-11', src: 'assets/albums/ministerio-das-criancas/cri (2).jpeg' },
-                { type: 'image', name: 'Crianças 3', date: '2023-07-12', src: 'assets/albums/ministerio-das-criancas/cri (3).jpeg' },
-                { type: 'image', name: 'Crianças 4', date: '2023-07-13', src: 'assets/albums/ministerio-das-criancas/cri (4).jpeg' },
-                { type: 'image', name: 'Crianças 5', date: '2023-07-14', src: 'assets/albums/ministerio-das-criancas/cri (5).jpeg' },
-                { type: 'image', name: 'Crianças 6', date: '2023-07-15', src: 'assets/albums/ministerio-das-criancas/cri (6).jpeg' },
-                { type: 'image', name: 'Crianças 7', date: '2023-07-16', src: 'assets/albums/ministerio-das-criancas/cri (7).jpeg' }
-            ],
-
-            'random': [
-                { type: 'image', name: 'R 1 JPEG', date: '2023-07-01', src: 'assets/albums/random/r (1).jpeg' },
-                { type: 'image', name: 'R 1 JPG', date: '2023-07-02', src: 'assets/albums/random/r (1).jpg' },
-                { type: 'image', name: 'R 2', date: '2023-07-03', src: 'assets/albums/random/r (2).jpg' },
-                { type: 'image', name: 'R 3 JPEG', date: '2023-07-04', src: 'assets/albums/random/r (3).jpeg' },
-                { type: 'image', name: 'R 3 JPG', date: '2023-07-05', src: 'assets/albums/random/r (3).jpg' },
-                { type: 'image', name: 'R 4', date: '2023-07-06', src: 'assets/albums/random/r (4).jpeg' },
-                { type: 'image', name: 'R 5', date: '2023-07-07', src: 'assets/albums/random/r (5).jpeg' },
-                { type: 'image', name: 'R 7', date: '2023-07-09', src: 'assets/albums/random/r (7).jpeg' },
-                { type: 'image', name: 'R 9', date: '2023-07-11', src: 'assets/albums/random/r (9).jpeg' },
-                { type: 'image', name: 'R 10', date: '2023-07-12', src: 'assets/albums/random/r (10).jpeg' },
-                { type: 'image', name: 'R 11', date: '2023-07-13', src: 'assets/albums/random/r (11).jpeg' }
-            ],
+'no-hospicio': [
+    { type: 'video', name: 'Reunião de Grupo', src: 'assets/albums/no-hospicio/ (1).mp4' },
+    { type: 'video', name: 'Reunião de Grupo', src: 'assets/albums/no-hospicio/ (2).mp4' },
+    { type: 'video', name: 'Reunião de Grupo', src: 'assets/albums/no-hospicio/ (3).mp4' }
+],
+'ministerio-da-mulher': [
+    { type: 'image', name: 'Foto 1', src: 'assets/albums/ministerio-da-mulher/women (1).jpg' },
+    { type: 'image', name: 'Foto 2', src: 'assets/albums/ministerio-da-mulher/women (3).jpeg' },
+    { type: 'image', name: 'Foto 3', src: 'assets/albums/ministerio-da-mulher/women (2).jpeg' }
+    
+],
             
-            'skimini': [
-                { type: 'image', name: 'Diversão 1', date: '2023-07-10', src: 'assets/albums/skimini/sk (1).jpeg' },
-                { type: 'image', name: 'Diversão 2', date: '2023-08-05', src: 'assets/albums/skimini/sk (2).jpeg' },
-                { type: 'image', name: 'Diversão 3', date: '2023-09-12', src: 'assets/albums/skimini/sk (3).jpeg' },
-                { type: 'image', name: 'Diversão 4', date: '2023-10-20', src: 'assets/albums/skimini/sk (4).jpeg' }
-            ],
+'master-chef': [
+    { type: 'image', name: 'Master', src: 'assets/albums/master-chef/master.jpeg' },
+    { type: 'video', name: 'Masters 1', src: 'assets/albums/master-chef/mastes (1).mp4' },
+    { type: 'image', name: 'Masters 2', src: 'assets/albums/master-chef/mastes (2).jpeg' },
+    { type: 'video', name: 'Masters 2 Vídeo', src: 'assets/albums/master-chef/mastes (2).mp4' }
+],
 
-            'snaplapse': [
-                { type: 'image', name: 'Snap 1', date: '2023-07-01', src: 'assets/albums/snaplapse/ (1).jpeg' },
-                { type: 'video', name: 'Snap 1 Vídeo', date: '2023-07-02', src: 'assets/albums/snaplapse/ (1).mp4' },
-                { type: 'image', name: 'Snap 2', date: '2023-07-03', src: 'assets/albums/snaplapse/ (2).jpeg' },
-                { type: 'video', name: 'Snap 2 Vídeo', date: '2023-07-04', src: 'assets/albums/snaplapse/ (2).mp4' },
-                { type: 'image', name: 'Snap 3', date: '2023-07-05', src: 'assets/albums/snaplapse/ (3).jpeg' },
-                { type: 'image', name: 'Snap 4', date: '2023-07-06', src: 'assets/albums/snaplapse/ (4).jpeg' },
-                { type: 'image', name: 'Snap 5', date: '2023-07-07', src: 'assets/albums/snaplapse/ (5).jpeg' },
-                { type: 'image', name: 'Snap 6', date: '2023-07-08', src: 'assets/albums/snaplapse/ (6).jpeg' },
-                { type: 'image', name: 'Snap 7', date: '2023-07-09', src: 'assets/albums/snaplapse/ (7).jpeg' },
-                { type: 'image', name: 'Snap 8', date: '2023-07-10', src: 'assets/albums/snaplapse/ (8).jpeg' },
-                { type: 'image', name: 'Snap 9', date: '2023-07-11', src: 'assets/albums/snaplapse/ (9).jpeg' },
-                { type: 'image', name: 'Snap 10', date: '2023-07-12', src: 'assets/albums/snaplapse/ (10).jpeg' },
-                { type: 'image', name: 'Snap 11', date: '2023-07-13', src: 'assets/albums/snaplapse/ (11).jpeg' }
-            ],
+'ministerio-das-criancas': [
+    { type: 'image', name: 'Crianças 1', src: 'assets/albums/ministerio-das-criancas/cri (1).jpeg' },
+    { type: 'image', name: 'Crianças 2', src: 'assets/albums/ministerio-das-criancas/cri (2).jpeg' },
+    { type: 'image', name: 'Crianças 3', src: 'assets/albums/ministerio-das-criancas/cri (3).jpeg' },
+    { type: 'image', name: 'Crianças 4', src: 'assets/albums/ministerio-das-criancas/cri (4).jpeg' },
+    { type: 'image', name: 'Crianças 5', src: 'assets/albums/ministerio-das-criancas/cri (5).jpeg' },
+    { type: 'image', name: 'Crianças 6', src: 'assets/albums/ministerio-das-criancas/cri (6).jpeg' },
+    { type: 'image', name: 'Crianças 7', src: 'assets/albums/ministerio-das-criancas/cri (7).jpeg' }
+],
 
-            'sweetsnap': [
-                { type: 'image', name: 'SweetSnap 1', date: '2023-07-01', src: 'assets/albums/sweetsnap/ss (1).jpeg' },
-                { type: 'video', name: 'SweetSnap 1 Vídeo', date: '2023-07-02', src: 'assets/albums/sweetsnap/ss (1).mp4' },
-                { type: 'image', name: 'SweetSnap 2', date: '2023-07-03', src: 'assets/albums/sweetsnap/ss (2).jpeg' },
-                { type: 'image', name: 'SweetSnap 3', date: '2023-07-04', src: 'assets/albums/sweetsnap/ss (3).jpeg' },
-                { type: 'image', name: 'SweetSnap 4', date: '2023-07-05', src: 'assets/albums/sweetsnap/ss (4).jpeg' },
-                { type: 'image', name: 'SweetSnap 5', date: '2023-07-06', src: 'assets/albums/sweetsnap/ss (5).jpeg' },
-                { type: 'image', name: 'SweetSnap 6', date: '2023-07-07', src: 'assets/albums/sweetsnap/ss (6).jpeg' },
-                { type: 'image', name: 'SweetSnap 7', date: '2023-07-08', src: 'assets/albums/sweetsnap/ss (7).jpeg' },
-                { type: 'image', name: 'SweetSnap 8', date: '2023-07-09', src: 'assets/albums/sweetsnap/ss (8).jpeg' },
-                { type: 'image', name: 'SweetSnap 9', date: '2023-07-10', src: 'assets/albums/sweetsnap/ss (9).jpeg' },
-                { type: 'image', name: 'SweetSnap 10', date: '2023-07-11', src: 'assets/albums/sweetsnap/ss (10).jpeg' },
-                { type: 'image', name: 'SweetSnap 11', date: '2023-07-12', src: 'assets/albums/sweetsnap/ss (11).jpeg' },
-                { type: 'image', name: 'SweetSnap 12', date: '2023-07-13', src: 'assets/albums/sweetsnap/ss (12).jpeg' }
-            ],
+'random': [
+    { type: 'image', name: 'R 1 JPEG', src: 'assets/albums/random/r (1).jpeg' },
+    { type: 'image', name: 'R 1 JPG', src: 'assets/albums/random/r (1).jpg' },
+    { type: 'image', name: 'R 2', src: 'assets/albums/random/r (2).jpg' },
+    { type: 'image', name: 'R 3 JPEG', src: 'assets/albums/random/r (3).jpeg' },
+    { type: 'image', name: 'R 3 JPG', src: 'assets/albums/random/r (3).jpg' },
+    { type: 'image', name: 'R 4', src: 'assets/albums/random/r (4).jpeg' },
+    { type: 'image', name: 'R 5', src: 'assets/albums/random/r (5).jpeg' },
+    { type: 'image', name: 'R 7', src: 'assets/albums/random/r (7).jpeg' },
+    { type: 'image', name: 'R 9', src: 'assets/albums/random/r (9).jpeg' },
+    { type: 'image', name: 'R 10', src: 'assets/albums/random/r (10).jpeg' },
+    { type: 'image', name: 'R 11', src: 'assets/albums/random/r (11).jpeg' }
+],
+
+'skimini': [
+    { type: 'image', name: 'Diversão 1', src: 'assets/albums/skimini/sk (1).jpeg' },
+    { type: 'image', name: 'Diversão 2', src: 'assets/albums/skimini/sk (2).jpeg' },
+    { type: 'image', name: 'Diversão 3', src: 'assets/albums/skimini/sk (3).jpeg' },
+    { type: 'image', name: 'Diversão 4', src: 'assets/albums/skimini/sk (4).jpeg' }
+],
+
+'snaplapse': [
+    { type: 'image', name: 'Snap 1', src: 'assets/albums/snaplapse/ (1).jpeg' },
+    { type: 'video', name: 'Snap 1 Vídeo', src: 'assets/albums/snaplapse/ (1).mp4' },
+    { type: 'image', name: 'Snap 2', src: 'assets/albums/snaplapse/ (2).jpeg' },
+    { type: 'video', name: 'Snap 2 Vídeo', src: 'assets/albums/snaplapse/ (2).mp4' },
+    { type: 'image', name: 'Snap 3', src: 'assets/albums/snaplapse/ (3).jpeg' },
+    { type: 'image', name: 'Snap 4', src: 'assets/albums/snaplapse/ (4).jpeg' },
+    { type: 'image', name: 'Snap 5', src: 'assets/albums/snaplapse/ (5).jpeg' },
+    { type: 'image', name: 'Snap 6', src: 'assets/albums/snaplapse/ (6).jpeg' },
+    { type: 'image', name: 'Snap 7', src: 'assets/albums/snaplapse/ (7).jpeg' },
+    { type: 'image', name: 'Snap 8', src: 'assets/albums/snaplapse/ (8).jpeg' },
+    { type: 'image', name: 'Snap 9', src: 'assets/albums/snaplapse/ (9).jpeg' },
+    { type: 'image', name: 'Snap 10', src: 'assets/albums/snaplapse/ (10).jpeg' },
+    { type: 'image', name: 'Snap 11', src: 'assets/albums/snaplapse/ (11).jpeg' }
+],
+
+'sweetsnap': [
+    { type: 'image', name: 'SweetSnap 1', src: 'assets/albums/sweetsnap/ss (1).jpeg' },
+    { type: 'video', name: 'SweetSnap 1 Vídeo', src: 'assets/albums/sweetsnap/ss (1).mp4' },
+    { type: 'image', name: 'SweetSnap 2', src: 'assets/albums/sweetsnap/ss (2).jpeg' },
+    { type: 'image', name: 'SweetSnap 3', src: 'assets/albums/sweetsnap/ss (3).jpeg' },
+    { type: 'image', name: 'SweetSnap 4', src: 'assets/albums/sweetsnap/ss (4).jpeg' },
+    { type: 'image', name: 'SweetSnap 5', src: 'assets/albums/sweetsnap/ss (5).jpeg' },
+    { type: 'image', name: 'SweetSnap 6', src: 'assets/albums/sweetsnap/ss (6).jpeg' },
+    { type: 'image', name: 'SweetSnap 7', src: 'assets/albums/sweetsnap/ss (7).jpeg' },
+    { type: 'image', name: 'SweetSnap 8', src: 'assets/albums/sweetsnap/ss (8).jpeg' },
+    { type: 'image', name: 'SweetSnap 9', src: 'assets/albums/sweetsnap/ss (9).jpeg' },
+    { type: 'image', name: 'SweetSnap 10', src: 'assets/albums/sweetsnap/ss (10).jpeg' },
+    { type: 'image', name: 'SweetSnap 11', src: 'assets/albums/sweetsnap/ss (11).jpeg' },
+    { type: 'image', name: 'SweetSnap 12', src: 'assets/albums/sweetsnap/ss (12).jpeg' }
+],
         };
 
         // Para álbuns sem mídias específicas, usamos mídias genéricas
@@ -887,6 +894,40 @@
             }
         }
 
+        // ========== CONFIGURAÇÃO SIMPLES DE ÁUDIO ==========
+document.addEventListener('DOMContentLoaded', function() {
+    const backgroundMusic = document.getElementById('background-music');
+    const volumeSlider = document.getElementById('volume-slider');
+    
+    // Volume inicial
+    backgroundMusic.volume = 0.7;
+    
+    // Apenas controle de volume
+    if (volumeSlider) {
+        volumeSlider.addEventListener('input', function() {
+            backgroundMusic.volume = this.value / 100;
+        });
+    }
+    
+    // Botão play/pause (apenas visual)
+    const playBtn = document.getElementById('music-play-btn');
+    if (playBtn) {
+        playBtn.onclick = function(e) {
+            e.preventDefault();
+            // Alterna entre play/pause visual apenas
+            const icon = document.getElementById('music-play-icon');
+            if (icon.classList.contains('fa-volume-up')) {
+                icon.className = 'fas fa-volume-mute';
+                backgroundMusic.volume = 0;
+                volumeSlider.value = 0;
+            } else {
+                icon.className = 'fas fa-volume-up';
+                backgroundMusic.volume = 0.7;
+                volumeSlider.value = 70;
+            }
+        };
+    }
+});
         // Estado da aplicação
         const state = {
             currentAlbumIndex: 0,
@@ -926,8 +967,7 @@
             playPauseBtn.addEventListener('click', togglePlayPause);
             prevBtn.addEventListener('click', showPreviousMedia);
             nextBtn.addEventListener('click', showNextMedia);
-            musicPlayBtn.addEventListener('click', toggleMusic);
-            volumeSlider.addEventListener('input', updateVolume);
+            
             
             // Configurar teclas de atalho
             document.addEventListener('keydown', handleKeydown);
@@ -960,7 +1000,7 @@
             const album = albums[albumIndex];
             currentAlbumTitle.textContent = album.name;
             currentAlbumDescription.textContent = album.description;
-            currentMusicName.textContent = album.music;
+            
             
             // Atualizar álbuns ativos
             document.querySelectorAll('.album-card').forEach((card, index) => {
@@ -971,7 +1011,7 @@
             renderAlbumMedia();
             
             // Configurar música do álbum
-            setupAlbumMusic();
+        
             
             // Reiniciar autoplay se estiver ativo
             if (state.isPlaying) {
@@ -1044,30 +1084,7 @@
         }
 
         // Configurar música do álbum
-        function setupAlbumMusic() {
-            // Em um sistema real, o src seria o caminho para o arquivo MP3 no diretório /music
-            const album = albums[state.currentAlbumIndex];
-            
-            // Parar música atual
-            backgroundMusic.pause();
-            
-            // Simular carregamento da música (em sistema real, carregaria o arquivo)
-            backgroundMusic.src = `${album.music}`; // Placeholder
-            
-            // Configurar volume
-            backgroundMusic.volume = state.musicVolume;
-            
-            // Reproduzir se a música estiver ativada
-            if (state.isMusicPlaying) {
-                setTimeout(() => {
-                    backgroundMusic.play().catch(e => console.log("Autoplay bloqueado pelo navegador"));
-                }, 500);
-            }
-            
-            // Atualizar ícone do botão de música
-            musicPlayIcon.className = state.isMusicPlaying ? 'fas fa-pause' : 'fas fa-play';
-        }
-
+       
         // Mostrar mídia anterior
         function showPreviousMedia() {
             const albumId = albums[state.currentAlbumIndex].id;
@@ -1150,24 +1167,9 @@
         }
 
         // Alternar play/pause da música
-        function toggleMusic() {
-            state.isMusicPlaying = !state.isMusicPlaying;
-            
-            if (state.isMusicPlaying) {
-                musicPlayIcon.className = 'fas fa-pause';
-                backgroundMusic.play().catch(e => console.log("Autoplay bloqueado pelo navegador"));
-            } else {
-                musicPlayIcon.className = 'fas fa-play';
-                backgroundMusic.pause();
-            }
-        }
-
+       
         // Atualizar volume da música
-        function updateVolume() {
-            state.musicVolume = volumeSlider.value / 100;
-            backgroundMusic.volume = state.musicVolume;
-        }
-
+        
         // Iniciar autoplay
         function startAutoPlay() {
             if (state.autoPlayInterval) clearInterval(state.autoPlayInterval);
@@ -1252,10 +1254,7 @@
                 case 'P':
                     togglePlayPause();
                     break;
-                case 'm':
-                case 'M':
-                    toggleMusic();
-                    break;
+                
             }
         }
 
