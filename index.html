@@ -547,24 +547,21 @@
             
             <!-- Controles de Música -->
             <!-- Controles de Música (MANTENHA, mas simplifique) -->
-<div class="music-controls" style="opacity: 0.6;">
+            <div class="music-controls">
     <div class="music-info">
         <i class="fas fa-music music-icon"></i>
         <div class="music-name" id="current-music-name">
-            Música de Fundo 🔄
+            Música de Fundo
         </div>
     </div>
     
-    <!-- Botão desativado -->
-    <button class="music-play-btn" id="music-play-btn" disabled 
-            style="cursor: not-allowed; opacity: 0.5;"
-            title="Música automática (sempre tocando)">
-        <i class="fas fa-play" id="music-play-icon"></i>
+    <!-- Botão funcional para play/pause -->
+    <button class="music-play-btn" id="music-play-btn">
+        <i class="fas fa-volume-up" id="music-play-icon"></i>
     </button>
     
-    <!-- Controle de volume FUNCIONAL (mantenha para ajustar volume) -->
     <div class="volume-control">
-        <i class="fas fa-volume-up" style="color: rgba(255,255,255,0.7);"></i>
+        <i class="fas fa-volume-up"></i>
         <input type="range" min="0" max="100" value="70" class="volume-slider" id="volume-slider">
     </div>
 </div>
@@ -586,7 +583,7 @@
     </div>
 
     <!-- Áudio para a música -->
-    <audio id="background-music" controls autoplay loop ">
+    <audio id="background-music" autoplay loop D ">
         <source src="assets/music/skimini.mp3" type="audio/mpeg">
     </audio>
 
@@ -894,36 +891,69 @@
             }
         }
 
-        // ========== CONFIGURAÇÃO SIMPLES DE ÁUDIO ==========
+        // ========== CONFIGURAÇÃO DE ÁUDIO ATUALIZADA ==========
 document.addEventListener('DOMContentLoaded', function() {
     const backgroundMusic = document.getElementById('background-music');
     const volumeSlider = document.getElementById('volume-slider');
+    const musicPlayBtn = document.getElementById('music-play-btn');
+    const musicPlayIcon = document.getElementById('music-play-icon');
     
     // Volume inicial
     backgroundMusic.volume = 0.7;
+    if (volumeSlider) volumeSlider.value = 70;
     
-    // Apenas controle de volume
+    // Tentar tocar automaticamente (lidando com bloqueio de autoplay)
+    const playPromise = backgroundMusic.play();
+    
+    if (playPromise !== undefined) {
+        playPromise.then(_ => {
+            // Autoplay funcionou
+            console.log("Música tocando automaticamente");
+            if (musicPlayIcon) {
+                musicPlayIcon.className = 'fas fa-volume-up';
+            }
+        }).catch(error => {
+            // Autoplay bloqueado - precisa de interação do usuário
+            console.log("Autoplay bloqueado. Aguardando interação...");
+            
+            if (musicPlayIcon) {
+                musicPlayIcon.className = 'fas fa-play';
+            }
+            
+            // Tocar após primeiro clique do usuário
+            document.addEventListener('click', function playOnClick() {
+                backgroundMusic.play();
+                console.log("Música iniciada após clique");
+                if (musicPlayIcon) {
+                    musicPlayIcon.className = 'fas fa-volume-up';
+                }
+                document.removeEventListener('click', playOnClick);
+            }, { once: true });
+        });
+    }
+    
+    // Controle de volume
     if (volumeSlider) {
         volumeSlider.addEventListener('input', function() {
             backgroundMusic.volume = this.value / 100;
         });
     }
     
-    // Botão play/pause (apenas visual)
-    const playBtn = document.getElementById('music-play-btn');
-    if (playBtn) {
-        playBtn.onclick = function(e) {
+    // Botão play/pause funcional
+    if (musicPlayBtn) {
+        musicPlayBtn.onclick = function(e) {
             e.preventDefault();
-            // Alterna entre play/pause visual apenas
-            const icon = document.getElementById('music-play-icon');
-            if (icon.classList.contains('fa-volume-up')) {
-                icon.className = 'fas fa-volume-mute';
-                backgroundMusic.volume = 0;
-                volumeSlider.value = 0;
+            
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                if (musicPlayIcon) {
+                    musicPlayIcon.className = 'fas fa-volume-up';
+                }
             } else {
-                icon.className = 'fas fa-volume-up';
-                backgroundMusic.volume = 0.7;
-                volumeSlider.value = 70;
+                backgroundMusic.pause();
+                if (musicPlayIcon) {
+                    musicPlayIcon.className = 'fas fa-volume-mute';
+                }
             }
         };
     }
